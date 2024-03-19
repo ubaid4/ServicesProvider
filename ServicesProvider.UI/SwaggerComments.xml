@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ServicesProvider.UI</name>
+    </assembly>
+    <members>
+        <member name="M:AuthJwt.UI.Controllers.AccountController.Signup(ServicesProvider.Core.DTOs.Account.SignupDTO)">
+            <summary>
+            Used to create user account
+            </summary>
+            <param name="signupDTO"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
