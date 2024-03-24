@@ -8,17 +8,17 @@
 Live demo : https://putazurelinkhere
 
 # Core Features:
- - **User Registration**
- - **Account Verification** tr e rt er t
+- **User Registration**
+- **Account Verification** tr e rt er t
    - item1
    - item2
- - **OAuth2.0 standard** 
- - **Role-Base Permissions**
- - **Cloud Storage**
- - **Cloud Function**
- - **Serverless architecture** 
- - **Monitoring Logs**
- - ****
+- **OAuth2.0 standard** 
+- **Role-Base Permissions**
+- **Cloud Storage**
+- **Cloud Function**
+- **Serverless architecture** 
+- **Monitoring Logs**
+- **Another Item** some text
 
 # Technologies
 
@@ -35,5 +35,6 @@ Live demo : https://putazurelinkhere
  - [AutoMapper](https://automapper.org/)
 
  ## Clean Architecture
- ! [test](./ServicesProvider.UI/wwwroot/images/clean-arch.png)
+ This application is followed by clean architecture:
+ ![img](./ServicesProvider.UI/wwwroot/images/clean-arch.png)
 
