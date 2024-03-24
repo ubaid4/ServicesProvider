@@ -12,7 +12,7 @@ Live demo : https://putazurelinkhere
 - **Account Verification** tr e rt er t
    - item1
    - item2
-- **OAuth2.0 standard** 
+- **OAuth2.0 standard** Access token for stort time and Refresh token for longer time to generate new Access token after validation
 - **Role-Base Permissions**
 - **Cloud Storage**
 - **Cloud Function**
