@@ -8,17 +8,17 @@
 Live demo : https://putazurelinkhere
 
 # Core Features:
-- **User Registration**
-- **Account Verification** tr e rt er t
+- **User Registration:**
+- **Account Verification:** tr e rt er t
    - item1
    - item2
-- **OAuth2.0 standard** Access token for stort time and Refresh token for longer time to generate new Access token after validation
-- **Role-Base Permissions**
-- **Cloud Storage**
-- **Cloud Function**
-- **Serverless architecture** 
-- **Monitoring Logs**
-- **Another Item** some text
+- **OAuth2.0 standard:** *Access token* for short time and *Refresh token* for longer time to generate new *Access token* after validation.
+- **Role-Base Permissions:**
+- **Cloud Storage:**
+- **Cloud Function:**
+- **Serverless architecture:** 
+- **Monitoring Logs:**
+- **Another Item:** some text
 
 # Technologies
 
