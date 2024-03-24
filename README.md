@@ -36,5 +36,5 @@ Live demo : https://putazurelinkhere
 
  ## Clean Architecture
  This application is followed by clean architecture:
- ![img](./ServicesProvider.UI/wwwroot/images/clean-arch.png)
 
+<img src='./ServicesProvider.UI/wwwroot/images/clean-arch.png' height="500" >
