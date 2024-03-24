@@ -15,6 +15,7 @@ namespace ServicesProvider.UI.Extensions
             services.AddScoped<IRoleRepository, RoleRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IGeneric<Category>,GenericRepository<Category>>();
+            services.AddScoped<IAzureStorageRepository,AzureStorageRepository>();
 
         }
 

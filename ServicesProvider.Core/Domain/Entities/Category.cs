@@ -17,7 +17,7 @@ namespace ServicesProvider.Core.Domain.Entities
         public int RenderOrder { get; set; }
         public int Status { get; set; }
         public int Size { get; set; }
-
+        public string IconUrl { get; set; }
         public ICollection<CoreActivity>? Activities { get; set; }
     }
 }

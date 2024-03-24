@@ -16,6 +16,7 @@ namespace AuthJwt.UI.Controllers
         //    }
         //    return Ok(responce);
         //}
-      
+
+
     }
 }

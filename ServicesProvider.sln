@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicesProvider.UI", "ServicesProvider.UI\ServicesProvider.UI.csproj", "{E6566F21-55D1-4E59-B225-AA96D08F3EBC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServicesProvider.UI", "ServicesProvider.UI\ServicesProvider.UI.csproj", "{E6566F21-55D1-4E59-B225-AA96D08F3EBC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicesProvider.Core", "ServicesProvider.Core\ServicesProvider.Core.csproj", "{3C49BD0C-6339-4415-ACA1-47D9BC14DAED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServicesProvider.Core", "ServicesProvider.Core\ServicesProvider.Core.csproj", "{3C49BD0C-6339-4415-ACA1-47D9BC14DAED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicesProvider.Infrastructure", "ServicesProvider.Infrastructure\ServicesProvider.Infrastructure.csproj", "{14C8FFBB-D66E-4D86-AB54-BEBB6F6EB0A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServicesProvider.Infrastructure", "ServicesProvider.Infrastructure\ServicesProvider.Infrastructure.csproj", "{14C8FFBB-D66E-4D86-AB54-BEBB6F6EB0A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

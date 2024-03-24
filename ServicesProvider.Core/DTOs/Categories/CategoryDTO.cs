@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -22,5 +23,9 @@ namespace ServicesProvider.Core.DTOs.Categories
         public int Status { get; set; }
         [Required(ErrorMessage = "Size is required")]
         public int Size { get; set; }
+
+        [Required(ErrorMessage = "Icon is required")]
+
+        public IFormFile? Icon { get; set; }
     }
 }

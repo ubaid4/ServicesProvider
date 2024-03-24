@@ -18,11 +18,8 @@ namespace AuthJwt.UI.Controllers
             _accountService = accountService;
             _logger = logger;
         }
-        /// <summary>
-        /// Used to create user account
-        /// </summary>
-        /// <param name="signupDTO"></param>
-        /// <returns></returns>
+      
+      
 
 
         [HttpPost("SignUp")]
@@ -49,7 +46,9 @@ namespace AuthJwt.UI.Controllers
          
             return Ok(result);
         }
-
+        /// <summary>
+        /// Used to create New Access token with Resfresh token
+        /// </summary>
         [HttpPut("GenerateTokenByRefreshToken")]
         public async Task<ActionResult> NewTokenByRefreshToken(RefreshTokenDTO refreshTokenDTO)
         {
@@ -61,6 +60,9 @@ namespace AuthJwt.UI.Controllers
             return Ok(result);
         }
 
+        /// <summary>
+        /// Used to expire current refresh token
+        /// </summary>
 
         [HttpDelete("RevokeRefreshToken/{UserId:required}")]
         public async Task<ActionResult> RevokeRefreshToken(string UserId)
@@ -101,7 +103,9 @@ namespace AuthJwt.UI.Controllers
             }
             return Ok(result);
         }
-
+        /// <summary>
+        /// Used to create new password if you forget old one.
+        /// </summary>
         [HttpPut("ForgetPassword")]
         public async Task<ActionResult> ForgetPassword(string Email)
         {
@@ -112,7 +116,9 @@ namespace AuthJwt.UI.Controllers
             }
             return Ok(result);
         }
-
+        /// <summary>
+        /// Used to verify user email to create new password
+        /// </summary>
         [HttpPut("VerifyForgetPassword")]
         public async Task<ActionResult> VerifyForgetPassword(VerifiyPasswordUpdateDTO VerifyForgetPasswordDTO)
         {
@@ -123,7 +129,9 @@ namespace AuthJwt.UI.Controllers
             }
             return Ok(result);
         }
-
+        /// <summary>
+        /// Used to update password if you remember old password
+        /// </summary>
         [HttpPut("ChangePasswordWithOld")]
         public async Task<ActionResult> ChangePasswordWithOld(ResetPasswordDTO ResetPasswordDTO)
         {
@@ -135,6 +143,9 @@ namespace AuthJwt.UI.Controllers
             return Ok(result);
         }
 
+        /// <summary>
+        /// Another way to change user password with email verification
+        /// </summary>
         [HttpPut("ChangePasswordWithEmailVerification")]
         public async Task<ActionResult> TokenForChangePassword(string UserId)
         {
@@ -146,6 +157,9 @@ namespace AuthJwt.UI.Controllers
             return Ok(result);
         }
 
+        /// <summary>
+        /// Verify Email to change the password
+        /// </summary>
         [HttpPut("VerifyTokenForChangePassword")]
         public async Task<ActionResult> VerifyTokenForChangePassword(VerifyChangePasswordDTO VerifyChangePasswordDTO)
         {

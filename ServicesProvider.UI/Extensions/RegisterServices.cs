@@ -14,6 +14,7 @@ namespace ServicesProvider.UI.Extensions
             services.AddScoped<ICoreActivityService, CoreActivityService>();
             services.AddScoped<IRoleService, RoleService>();
             services.AddScoped<IJwtService, JwtService>();
+            services.AddScoped<IAzureStorageService, AzureStorageService>();
         }
     }
 }

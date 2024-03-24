@@ -4,12 +4,13 @@ namespace ServicesProvider.UI.Extensions
 {
     public static class RegisterSwagger
     {
-        public static IServiceCollection RegisterAppSwagger(this IServiceCollection services)
+        public static IServiceCollection RegisterAppSwagger(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddSwaggerGen(c =>
             {
+                
                 c.IncludeXmlComments("SwaggerComments.xml");
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Services Provider", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Services Provider (" + configuration.GetSection("ENV").Value?.ToString() + ")", Version = "v1" }); ; ;
 
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
                 {

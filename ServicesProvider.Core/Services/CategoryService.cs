@@ -17,17 +17,21 @@ namespace ServicesProvider.Core.Services
        // private readonly IGeneric<Category> _genericRepository;
         private readonly ICategoryRepository _categoryRepository;
         private readonly IMapper _autoMapper;
-        public CategoryService( IGeneric<Category> genericRepository,IMapper autoMapper,ICategoryRepository categoryRepository ) 
+        private readonly IAzureStorageService _azureStorageService;
+        public CategoryService( IGeneric<Category> genericRepository,IMapper autoMapper,ICategoryRepository categoryRepository, IAzureStorageService azureStorageService ) 
         { 
             //_genericRepository = genericRepository;
             _autoMapper = autoMapper;
             _categoryRepository = categoryRepository;
+            _azureStorageService = azureStorageService;
+
         
         }
         public async Task<BaseResponce> AddCategory(CategoryDTO categoryData)
         {
             categoryData.Id = Guid.NewGuid().ToString();
             Category Category=_autoMapper.Map<Category>(categoryData);
+            Category.IconUrl = await _azureStorageService.UploadSingleFile(categoryData.Icon) ?? "DefaultCategoryIcon.png";
             //Category res=await _genericRepository.Add(Category);
             Category res =await _categoryRepository.Add(Category);
             if (res == null)

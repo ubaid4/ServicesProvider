@@ -1,18 +1,23 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Azure.Storage.Blobs;
+using Azure.Storage.Blobs.Models;
+using Microsoft.AspNetCore.Mvc;
 using ServicesProvider.Core.DTOs.Categories;
 using ServicesProvider.Core.DTOs.Shared;
 using ServicesProvider.Core.Enums;
 using ServicesProvider.Core.ServicInterfaces;
 using ServicesProvider.UI.Authorization.Attributes;
 
+
 namespace AuthJwt.UI.Controllers
 {
     public class CategoriesController : BaseController
     {
         private readonly ICategoryService _categoryService;
-        public CategoriesController(ICategoryService categoryService) 
+        private readonly string _azureConnectionString;
+        public CategoriesController(ICategoryService categoryService, IConfiguration configuration) 
         {
             _categoryService = categoryService;
+            _azureConnectionString = configuration["AzureBlobStorage:ConnectionString"];
         }
         //[AppPermission(AppModules.Categories,ModuleAction.View)]
         [HttpGet("GetById/{Id:required}")]
@@ -47,6 +52,7 @@ namespace AuthJwt.UI.Controllers
             return Ok(res);
         }
         //[AppPermission(AppModules.Categories,ModuleAction.Add)]
+     
         [HttpPost("AddNew")]
         public async Task<IActionResult> AddNew(CategoryDTO category)
         {
@@ -56,7 +62,6 @@ namespace AuthJwt.UI.Controllers
                 return BadRequest(res);
             }
             return Ok(res);
-            
         }
         //[AppPermission(AppModules.Categories,ModuleAction.Delete)]
         [HttpDelete("Delete/{categoryId}")]
@@ -81,5 +86,6 @@ namespace AuthJwt.UI.Controllers
             }
             return Ok(res);
         }
+     
     }
 }
