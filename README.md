@@ -5,7 +5,7 @@
 
 
 
-Live demo : https://putazurelinkhere
+Live demo : [Services Provider Live](https://sp-azure-container.politesea-3d1e9621.australiaeast.azurecontainerapps.io)
 
 # Core Features:
 - **User Registration:**
@@ -15,7 +15,6 @@ Live demo : https://putazurelinkhere
 - **OAuth2.0 standard:** *Access token* for short time and *Refresh token* for longer time to generate new *Access token* after validation.
 - **Role-Base Permissions:**
 - **Cloud Storage:**
-- **Cloud Function:**
 - **Serverless architecture:** 
 - **Monitoring Logs:**
 - **Another Item:** some text
