@@ -16,6 +16,7 @@ namespace ServicesProvider.Core.DTOs.Categories
         public int Status { get; set; }
         public int Size { get; set; }
 
-        public List<CoreActivityResponceDTO> Activities { get; set; }    
+        public string? IconURL { get; set; }
+
     }
 }

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AuthJwt.UI.Controllers
+namespace ServicesProvider.UI.Controllers
 {
     
     public class DashboardController : BaseController

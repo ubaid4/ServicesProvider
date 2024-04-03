@@ -15,9 +15,9 @@ Live demo : [Services Provider Live](https://sp-azure-container.politesea-3d1e96
 - **OAuth2.0 standard:** *Access token* for short time and *Refresh token* for longer time to generate new *Access token* after validation.
 - **Role-Base Permissions:**
 - **Cloud Storage:**
+- **Builder Pattern:** some text
 - **Serverless architecture:** 
 - **Monitoring Logs:**
-- **Another Item:** some text
 
 # Technologies
 
@@ -36,4 +36,9 @@ Live demo : [Services Provider Live](https://sp-azure-container.politesea-3d1e96
  ## Clean Architecture
  This application is followed by clean architecture:
 
+
 <img src='./ServicesProvider.UI/wwwroot/images/clean-arch.png' height="500" >
+
+## Solid Principles
+
+## Repository Pattern

@@ -27,18 +27,19 @@ namespace ServicesProvider.Core.Services
 
         
         }
-        public async Task<BaseResponce> AddCategory(CategoryDTO categoryData)
+        public async Task<BaseResponce> AddCategory(AddCategoryDTO categoryData)
         {
-            categoryData.Id = Guid.NewGuid().ToString();
+            //categoryData.Id = Guid.NewGuid().ToString();
             Category Category=_autoMapper.Map<Category>(categoryData);
-            Category.IconUrl = await _azureStorageService.UploadSingleFile(categoryData.Icon) ?? "DefaultCategoryIcon.png";
+          
+            //Category.IconUrl = await _azureStorageService.UploadSingleFile(categoryData.Icon) ?? "DefaultCategoryIcon.png";
             //Category res=await _genericRepository.Add(Category);
             Category res =await _categoryRepository.Add(Category);
             if (res == null)
             {
                 return new BaseResponce() { IsSuccess = false, Message = "Failed to add category" };
             }
-            CategoryDTO data=_autoMapper.Map<CategoryDTO>(res);
+            CategoryResponceDTO data =_autoMapper.Map<CategoryResponceDTO>(res);
             return new GenericResponce() { IsSuccess = true, Message = "Category added successfully" ,Data=data};
             
         }
@@ -66,7 +67,7 @@ namespace ServicesProvider.Core.Services
             {
                 return new BaseResponce() { IsSuccess = true, Message = "No category found" };
             }
-            return new GenericResponce() { IsSuccess = true, Message = "categories fetched successfully", Data = categories.Select(x => _autoMapper.Map<CategoryDTO>(x)) };
+            return new GenericResponce() { IsSuccess = true, Message = "categories fetched successfully", Data = categories.Select(x => _autoMapper.Map<EditCategoryDTO>(x)) };
         }
 
         public async Task<BaseResponce> GetCategory(string categoryId)
@@ -76,7 +77,7 @@ namespace ServicesProvider.Core.Services
             {
                 return new BaseResponce() { IsSuccess = true, Message = "Category not found" };
             }
-            return new GenericResponce() { IsSuccess = true, Message = "Category fetched successfully", Data = _autoMapper.Map<CategoryDTO>(Category) };
+            return new GenericResponce() { IsSuccess = true, Message = "Category fetched successfully", Data = _autoMapper.Map<EditCategoryDTO>(Category) };
         }
 
         public async Task<BaseResponce> GetChildCoreActivities(string categoryId)
@@ -86,11 +87,11 @@ namespace ServicesProvider.Core.Services
             {
                 return new BaseResponce() { IsSuccess = true, Message = "Category not found" };
             }
-            return new GenericResponce() { IsSuccess = true, Message = "Category fetched successfully", Data = _autoMapper.Map<CategoryResponceDTO>(Category) };
+            return new GenericResponce() { IsSuccess = true, Message = "Category fetched successfully", Data = _autoMapper.Map<CategoryWithChildResponceDTO>(Category) };
 
         }
 
-        public async Task<BaseResponce> UpdateCategory(CategoryDTO category)
+        public async Task<BaseResponce> UpdateCategory(EditCategoryDTO category)
         {
 
             Category Category=await _categoryRepository.Update(_autoMapper.Map<Category>(category));
@@ -98,7 +99,7 @@ namespace ServicesProvider.Core.Services
             {
                 return new BaseResponce() { IsSuccess = false, Message = "Failed to update category" };
             }
-            return new GenericResponce() { IsSuccess = true, Message = "Category updated successfully",Data=_autoMapper.Map<CategoryDTO>(Category)  };
+            return new GenericResponce() { IsSuccess = true, Message = "Category updated successfully",Data=_autoMapper.Map<EditCategoryDTO>(Category)  };
         }
     }
 }

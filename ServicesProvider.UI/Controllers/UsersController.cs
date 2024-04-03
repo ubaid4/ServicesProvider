@@ -1,4 +1,4 @@
-﻿using AuthJwt.UI.Controllers;
+﻿using ServicesProvider.UI.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using ServicesProvider.Core.DTOs.Shared;
 using ServicesProvider.Core.DTOs.Users;
@@ -15,7 +15,8 @@ namespace ServicesProvider.UI.Controllers
         {
             _userService = userService;
         }
-        [HttpGet("/GetById/{UserId}")]
+        [AppPermission(AppModules.Users,ModuleAction.View)]
+        [HttpGet("/GetById/{UserId:required:appGuid}")]
         public async Task<ActionResult> GetUser(string UserId)
         {
             BaseResponce responce = await _userService.GetUser(UserId);
@@ -27,7 +28,7 @@ namespace ServicesProvider.UI.Controllers
 
         }
 
-        //[AppPermission(AppModules.User,ModuleAction.View)]
+        [AppPermission(AppModules.Users,ModuleAction.View)]
         [HttpGet("/GetAll")]
         public async Task<IActionResult> GetAllUsers()
         {

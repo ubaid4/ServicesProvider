@@ -40,10 +40,10 @@ namespace ServicesProvider.Core.Services
                 return new BaseResponce { IsSuccess = false, Message = "Role not found" };
             }
 
-            foreach (ClaimDTO claim in RoleClaims.Claims)
+            foreach (ClaimDTO claim in RoleClaims.Permissions)
             {
-                string ClaimValue=JsonSerializer.Serialize(claim.Value);
-                await _roleRepository.AddRoleClaim(Role, new Claim(claim.Type, ClaimValue));
+                string ClaimValue=JsonSerializer.Serialize(claim.Permission);
+                await _roleRepository.AddRoleClaim(Role, new Claim(claim.ModuleName, ClaimValue));
             }
 
          return new BaseResponce { IsSuccess = true, Message = "Claims added in role successfully" };
@@ -71,10 +71,10 @@ namespace ServicesProvider.Core.Services
             {
                 return new BaseResponce { IsSuccess = false, Message = "failed to add role", Errors = result.Errors.Select(x => x.Description).ToList() };
             }
-            foreach (ClaimDTO claim in RoleClaims.Claims)
+            foreach (ClaimDTO claim in RoleClaims.Permissions)
             {
-                string ClaimValue = JsonSerializer.Serialize(claim.Value);
-                await _roleRepository.AddRoleClaim(Role, new Claim(claim.Type, ClaimValue));
+                string ClaimValue = JsonSerializer.Serialize(claim.Permission);
+                await _roleRepository.AddRoleClaim(Role, new Claim(claim.ModuleName, ClaimValue));
             }
            
 
@@ -139,7 +139,7 @@ namespace ServicesProvider.Core.Services
             foreach (Claim claim in claims)
             {
                ActionDTO actions= JsonSerializer.Deserialize<ActionDTO>(claim.Value);
-                ClaimList.Add(new ClaimDTO { Type = claim.Type, Value = actions });
+                ClaimList.Add(new ClaimDTO { ModuleName = claim.Type, Permission = actions });
             }
             return new GenericResponce { IsSuccess = true, Message = "Claims fetched successfully", Data = ClaimList };
 
@@ -281,10 +281,10 @@ namespace ServicesProvider.Core.Services
             }
 
             //add new claims in role
-            foreach (ClaimDTO claim in RoleClaims.Claims)
+            foreach (ClaimDTO claim in RoleClaims.Permissions)
             {
-                string ClaimValue = JsonSerializer.Serialize(claim.Value);
-                IdentityResult result  = await _roleRepository.AddRoleClaim(role, new Claim(claim.Type, ClaimValue));
+                string ClaimValue = JsonSerializer.Serialize(claim.Permission);
+                IdentityResult result  = await _roleRepository.AddRoleClaim(role, new Claim(claim.ModuleName, ClaimValue));
                 if (!result.Succeeded)
                 {
                     return new BaseResponce { IsSuccess = false, Message = "failed to update role", Errors = result.Errors.Select(x => x.Description).ToList() };

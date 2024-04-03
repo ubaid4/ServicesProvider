@@ -11,6 +11,6 @@ namespace ServicesProvider.Core.DTOs.Roles
     {
        public string RoleId { get; set; }
        
-      public List<ClaimDTO> Claims { get; set; }
+      public List<ClaimDTO> Permissions { get; set; }
     }
 }

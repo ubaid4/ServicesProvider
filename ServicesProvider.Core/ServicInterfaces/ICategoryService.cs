@@ -13,8 +13,8 @@ namespace ServicesProvider.Core.ServicInterfaces
         Task<BaseResponce> GetCategory(string categoryId);
         Task<BaseResponce> GetChildCoreActivities(string categoryId);
         Task<BaseResponce> GetAllCategories();
-        Task<BaseResponce> AddCategory(CategoryDTO category);
+        Task<BaseResponce> AddCategory(AddCategoryDTO category);
         Task<BaseResponce> DeleteCategory(string categoryId);
-        Task<BaseResponce> UpdateCategory(CategoryDTO category);
+        Task<BaseResponce> UpdateCategory(EditCategoryDTO category);
     }
 }

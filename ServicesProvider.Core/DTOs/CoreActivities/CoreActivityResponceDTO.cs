@@ -15,6 +15,8 @@ namespace ServicesProvider.Core.DTOs.CoreActivities
         public int OrderNumber { get; set; }
         public int Status { get; set; }
         public int Size { get; set; }
-        public Category Category { get; set; }
+        public string? IconURL { get; set; }
+
+        public string CategoryId { get; set; }
     }
 }

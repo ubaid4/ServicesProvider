@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using ServicesProvider.Core.DTOs.Account;
 using ServicesProvider.Core.DTOs.Accounts;
@@ -7,8 +8,9 @@ using ServicesProvider.Core.ServicInterfaces;
 using ServicesProvider.UI.Constraint;
 
 
-namespace AuthJwt.UI.Controllers
+namespace ServicesProvider.UI.Controllers
 {
+    [AllowAnonymous]
     public class AccountController : BaseController
     {
         private readonly IAccountService _accountService;
@@ -49,9 +51,11 @@ namespace AuthJwt.UI.Controllers
         /// <summary>
         /// Used to create New Access token with Resfresh token
         /// </summary>
+
         [HttpPut("GenerateTokenByRefreshToken")]
         public async Task<ActionResult> NewTokenByRefreshToken(RefreshTokenDTO refreshTokenDTO)
         {
+            var UserPrinciple = User;
             BaseResponce result = await _accountService.GenerateTokenByRefreshToken(refreshTokenDTO.UserId, refreshTokenDTO.RefreshToken);
             if (!result.IsSuccess)
             {
@@ -64,7 +68,7 @@ namespace AuthJwt.UI.Controllers
         /// Used to expire current refresh token
         /// </summary>
 
-        [HttpDelete("RevokeRefreshToken/{UserId:required}")]
+        [HttpDelete("RevokeRefreshToken/{UserId:required:appGuid}")]
         public async Task<ActionResult> RevokeRefreshToken(string UserId)
         {
             BaseResponce result = await _accountService.RevokeRefreshToken(UserId);
@@ -77,13 +81,9 @@ namespace AuthJwt.UI.Controllers
         }
 
 
-        [HttpGet("ResendVerificationEmail/{Email:required}")]
+        [HttpGet("ResendVerificationEmail/{Email:required:email}")]
         public async Task<ActionResult> ResendEmailVerificationToken(string Email)
         {
-            if (!ParamConstrains.IsValidEmail(Email))
-            {
-                return BadRequest(new BaseResponce { IsSuccess = false, Message = "Failed to send Email", Errors = new List<string> { "Email address is not correct" } }) ;
-            }
 
             BaseResponce result = await _accountService.ResendEmailVerificationToken(Email);
             if (!result.IsSuccess)

@@ -22,6 +22,8 @@ namespace ServicesProvider.Infrastructure.Repositories
         public async Task<IList<CoreActivity>> GetCoreActivitiesByCategoryId(Guid CategoryId)
         {
             return await _context.CoreActivities.Where(x => x.CategoryId == CategoryId).ToListAsync();
-                    }
+        }
+
+       
     }
 }

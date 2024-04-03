@@ -1,4 +1,4 @@
-﻿using AuthJwt.UI.Controllers;
+﻿using ServicesProvider.UI.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using ServicesProvider.Core.Domain.Entities;
 using ServicesProvider.Core.DTOs.Roles;
@@ -27,7 +27,7 @@ namespace ServicesProvider.UI.Controllers
             return Ok(res);
         }
 
-        [HttpGet("Get/{Id:required}")]
+        [HttpGet("Get/{Id:required:appGuid}")]
         public async Task<IActionResult> Get(string Id)
         {
             BaseResponce res = await _roleService.GetRoleById(Id);
@@ -49,7 +49,7 @@ namespace ServicesProvider.UI.Controllers
             }
             return Ok(res);
         }
-        [HttpDelete("Delete/{Id:required}")]
+        [HttpDelete("Delete/{Id:required:appGuid}")]
         public async Task<IActionResult> Delete(string Id)
         {
             BaseResponce res = await _roleService.DeleteRole(Id);
@@ -92,7 +92,7 @@ namespace ServicesProvider.UI.Controllers
             return Ok(res);
         }
 
-        [HttpGet("GetUserRoles/{UserId:required}")]
+        [HttpGet("GetUserRoles/{UserId:required:appGuid}")]
         public async Task<IActionResult> GetUserRoles(string UserId)
         {
             
@@ -104,7 +104,7 @@ namespace ServicesProvider.UI.Controllers
             return Ok(res);
         }
 
-        [HttpGet("GetUsersByRole/{RoleId:required}")]
+        [HttpGet("GetUsersByRole/{RoleId:required:appGuid}")]
         public async Task<IActionResult> GetUsersByRole(string RoleId)
         {
             BaseResponce res = await _roleService.GetUsersByRole(RoleId);
@@ -137,7 +137,7 @@ namespace ServicesProvider.UI.Controllers
             return Ok(res);
         }
 
-        [HttpGet("GetClaimsByRole/{RoleId:required}")]
+        [HttpGet("GetClaimsByRole/{RoleId:required:appGuid}")]
         public async Task<IActionResult> GetClaimsByRole(string RoleId)
         {
             BaseResponce res = await _roleService.GetClaimsByRole(RoleId);
@@ -159,7 +159,7 @@ namespace ServicesProvider.UI.Controllers
             return Ok(res);
         }
 
-        [HttpDelete("RemoveClaimFromRole/{RoleId:required}/{ClaimType:required}")]
+        [HttpDelete("RemoveClaimFromRole/{RoleId:required:appGuid}/{ClaimType:required:appGuid}")]
         public async Task<IActionResult> RemoveClaimFromRole(string RoleId, string ClaimType)
         {
 

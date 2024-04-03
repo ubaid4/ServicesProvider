@@ -8,7 +8,7 @@ namespace ServicesProvider.Core.DTOs.Roles
 {
     public record ClaimDTO
     {
-        public string Type { get; set; }
-        public ActionDTO Value { get; set; }
+        public string ModuleName { get; set; }
+        public ActionDTO Permission { get; set; }
     }
 }

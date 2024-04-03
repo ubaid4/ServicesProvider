@@ -13,6 +13,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\assets - Copy\**" />
+    <Compile Remove="wwwroot\assets\**" />
+    <Content Remove="wwwroot\assets - Copy\**" />
+    <Content Remove="wwwroot\assets\**" />
+    <EmbeddedResource Remove="wwwroot\assets - Copy\**" />
+    <EmbeddedResource Remove="wwwroot\assets\**" />
+    <None Remove="wwwroot\assets - Copy\**" />
+    <None Remove="wwwroot\assets\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="13.0.1" />
     <PackageReference Include="Azure.Storage.Blobs" Version="12.19.1" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.1" />
@@ -36,10 +47,6 @@
   <ItemGroup>
     <ProjectReference Include="..\ServicesProvider.Core\ServicesProvider.Core.csproj" />
     <ProjectReference Include="..\ServicesProvider.Infrastructure\ServicesProvider.Infrastructure.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Filters\" />
   </ItemGroup>
 
 </Project>

@@ -26,10 +26,16 @@ namespace ServicesProvider.UI.Extensions
                     ValidIssuer = builder.Configuration.GetRequiredSection("Jwt")["Issuer"],
                     ValidateLifetime = true,
                     ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(builder.Configuration.GetRequiredSection("Jwt")["Key"]))
+                    IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(builder.Configuration.GetRequiredSection("Jwt")["Key"])),
+                    //There is an additional delay of 5 minutes in the jwt itself.
+                    //If you are setting 1 minute as indicated for expiration, the total will be 6 minutes.
+                    //If you set 1 hour the total will be 1 hour and 5 minutes.
+                    //to set the exact expiration, which you set in token generation then make following property zero
+                    ClockSkew = TimeSpan.Zero
+
                 };
-                
-                bearer.Events = new JwtBearerEvents
+
+                /*bearer.Events = new JwtBearerEvents
                 {
                     OnChallenge = async context =>
                     {
@@ -52,7 +58,8 @@ namespace ServicesProvider.UI.Extensions
                         context.Response.ContentType = "application/json";
                         await context.Response.WriteAsJsonAsync(new BaseResponce() { IsSuccess = false, Message = "Sorry! You are not authorize" });
                     }
-                };
+
+                };*/
 
 
             });

@@ -1,4 +1,4 @@
-﻿using AuthJwt.UI.Controllers;
+﻿using ServicesProvider.UI.Controllers;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

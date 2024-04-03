@@ -11,7 +11,7 @@ namespace ServicesProvider.UI.Extensions
             services.AddScoped<IAccountRepository, AccountRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<ICoreActivityRepository, CoreActivityRepository>();
-            services.AddScoped<IServicesRepository, ServiceRepository>();
+            services.AddScoped<IAppServicesRepository, ServiceRepository>();
             services.AddScoped<IRoleRepository, RoleRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IGeneric<Category>,GenericRepository<Category>>();

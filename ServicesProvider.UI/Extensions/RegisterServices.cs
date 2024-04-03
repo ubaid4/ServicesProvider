@@ -9,7 +9,7 @@ namespace ServicesProvider.UI.Extensions
         {
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IAccountService, AccountService>();
-            services.AddScoped<IServiceService, ServiceService>();
+            services.AddScoped<IAppServicesService, AppServicesService>();
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<ICoreActivityService, CoreActivityService>();
             services.AddScoped<IRoleService, RoleService>();

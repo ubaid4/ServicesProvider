@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using ServicesProvider.Core.DTOs.Shared;
 
-namespace AuthJwt.UI.Controllers
+namespace ServicesProvider.UI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

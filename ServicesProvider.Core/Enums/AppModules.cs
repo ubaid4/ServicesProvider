@@ -14,7 +14,8 @@ namespace ServicesProvider.Core.Enums
         Categories,
         CoreActivities,
         Services,
-        Advertisement
+        Advertisement,
+        AzureStorage
        
     }
 }

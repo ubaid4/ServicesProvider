@@ -4,39 +4,49 @@
         <name>ServicesProvider.UI</name>
     </assembly>
     <members>
-        <member name="M:AuthJwt.UI.Controllers.AccountController.NewTokenByRefreshToken(ServicesProvider.Core.DTOs.Accounts.RefreshTokenDTO)">
+        <member name="M:ServicesProvider.UI.Controllers.AccountController.NewTokenByRefreshToken(ServicesProvider.Core.DTOs.Accounts.RefreshTokenDTO)">
             <summary>
             Used to create New Access token with Resfresh token
             </summary>
         </member>
-        <member name="M:AuthJwt.UI.Controllers.AccountController.RevokeRefreshToken(System.String)">
+        <member name="M:ServicesProvider.UI.Controllers.AccountController.RevokeRefreshToken(System.String)">
             <summary>
             Used to expire current refresh token
             </summary>
         </member>
-        <member name="M:AuthJwt.UI.Controllers.AccountController.ForgetPassword(System.String)">
+        <member name="M:ServicesProvider.UI.Controllers.AccountController.ForgetPassword(System.String)">
             <summary>
             Used to create new password if you forget old one.
             </summary>
         </member>
-        <member name="M:AuthJwt.UI.Controllers.AccountController.VerifyForgetPassword(ServicesProvider.Core.DTOs.Accounts.VerifiyPasswordUpdateDTO)">
+        <member name="M:ServicesProvider.UI.Controllers.AccountController.VerifyForgetPassword(ServicesProvider.Core.DTOs.Accounts.VerifiyPasswordUpdateDTO)">
             <summary>
             Used to verify user email to create new password
             </summary>
         </member>
-        <member name="M:AuthJwt.UI.Controllers.AccountController.ChangePasswordWithOld(ServicesProvider.Core.DTOs.Accounts.ResetPasswordDTO)">
+        <member name="M:ServicesProvider.UI.Controllers.AccountController.ChangePasswordWithOld(ServicesProvider.Core.DTOs.Accounts.ResetPasswordDTO)">
             <summary>
             Used to update password if you remember old password
             </summary>
         </member>
-        <member name="M:AuthJwt.UI.Controllers.AccountController.TokenForChangePassword(System.String)">
+        <member name="M:ServicesProvider.UI.Controllers.AccountController.TokenForChangePassword(System.String)">
             <summary>
             Another way to change user password with email verification
             </summary>
         </member>
-        <member name="M:AuthJwt.UI.Controllers.AccountController.VerifyTokenForChangePassword(ServicesProvider.Core.DTOs.Accounts.VerifyChangePasswordDTO)">
+        <member name="M:ServicesProvider.UI.Controllers.AccountController.VerifyTokenForChangePassword(ServicesProvider.Core.DTOs.Accounts.VerifyChangePasswordDTO)">
             <summary>
             Verify Email to change the password
+            </summary>
+        </member>
+        <member name="T:ServicesProvider.UI.Controllers.FileStorageController">
+            <summary>
+            This controller is used to upload, download and delete files from Azure Blob Storage
+            </summary>
+        </member>
+        <member name="M:ServicesProvider.UI.Controllers.FileStorageController.UploadFile(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            this endpoint is used to upload any type of file to Azure Blob Storage
             </summary>
         </member>
     </members>

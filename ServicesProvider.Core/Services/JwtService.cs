@@ -29,7 +29,9 @@ namespace ServicesProvider.Core.Services
 
         public async Task<(string, DateTimeOffset)> GenerateJwtToken(AppUser User)
         {
-            DateTime expiration = DateTime.Now.AddMinutes(Convert.ToDouble(_configuration.GetSection("Jwt")["Access_Token_Expiration_Minutes"]));
+            DateTime expiration1 = DateTime.Now.AddMinutes(Convert.ToDouble(_configuration.GetSection("Jwt")["Access_Token_Expiration_Minutes"]));
+            DateTime expiration = DateTimeOffset.UtcNow.UtcDateTime.AddMinutes(Convert.ToDouble(_configuration.GetSection("Jwt")["Access_Token_Expiration_Minutes"]));
+
             SymmetricSecurityKey secKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration.GetSection("Jwt")["Key"]));
             SigningCredentials cred = new SigningCredentials(secKey, SecurityAlgorithms.HmacSha512Signature);
             List<Claim> claims = new List<Claim>()

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
+using ServicesProvider.Core.DTOs.Shared;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,12 @@ namespace ServicesProvider.Core.ServicInterfaces
 {
     public interface IAzureStorageService
     {
-        Task<string> UploadSingleFile(IFormFile File);
+        Task<BaseResponce> UploadSingleFile(IFormFile File);
+        Task<BaseResponce?> IsBloabExist(string Url);
+        Task<BaseResponce> UploadMultipleFiles(List<IFormFile> Files);
+        Task<BlobDTO> DownloadFile(string FileUrl);
+        Task<BaseResponce> DeleteFile(string FileUrl);
+
        
 
  

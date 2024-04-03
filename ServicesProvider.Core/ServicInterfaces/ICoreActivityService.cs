@@ -15,8 +15,8 @@ namespace ServicesProvider.Core.ServicInterfaces
         Task<BaseResponce> GetAllCoreActivities();
 
          Task<BaseResponce>  GetAllCoreActivitiesByCategory(string CategoryId);
-        Task<BaseResponce> AddCoreActivity(CoreActivityDTO CoreActivity);
+        Task<BaseResponce> AddCoreActivity(CoreActivityAddDTO CoreActivity);
         Task<BaseResponce> DeleteCoreActivity(string CoreActivityId);
-        Task<BaseResponce> UpdateCoreActivity(CoreActivityDTO CoreActivity);
+        Task<BaseResponce> UpdateCoreActivity(CoreActivityEditDTO CoreActivity);
     }
 }

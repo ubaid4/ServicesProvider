@@ -362,3 +362,9 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/ServicesProvider.UI/appsettings.Production.json
+/ServicesProvider.Infrastructure/Migrations
+/.dockerignore22
+/Dockerfile11
+/TextFile1.txt
+/ServicesProvider.UI/.config

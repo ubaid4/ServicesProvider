@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ServicesProvider.Core.Domain.RepositoryInterfaces
+namespace ServicesProvider.Core.Builders
 {
-    public interface IServicesRepository
+    public class RolesBuilder
     {
     }
 }
