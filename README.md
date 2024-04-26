@@ -99,7 +99,7 @@ Here is  the list roles :
 
 
 ## Users
-Here is the list of Users:
+Here is the list of Users with their Roles:
 
 
 | UserName | Email            | Password  | Roles |
@@ -113,3 +113,4 @@ Here is the list of Users:
 
 
 
+  >you can user `UserName` or `Email` with Password to signIn.
