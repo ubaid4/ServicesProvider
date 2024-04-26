@@ -10,7 +10,9 @@
 *.userosscache
 *.sln.docstates
 *.gitattributes
-
+.github/*
+#ignore all files and folders inside .github folder
+!.github/*
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 

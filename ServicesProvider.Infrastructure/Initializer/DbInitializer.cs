@@ -44,6 +44,7 @@ namespace ServicesProvider.Infrastructure.Initializer
                     new ClaimBuilder(AppModules.Categories.ToString()).CanView().CanAdd().CanEdit().CanDelete().Build(),
                     new ClaimBuilder(AppModules.CoreActivities.ToString()).CanView().CanAdd().CanEdit().CanDelete().Build(),
                     new ClaimBuilder(AppModules.Services.ToString()).CanView().CanAdd().CanEdit().CanDelete().Build(),
+                    new ClaimBuilder(AppModules.AzureStorage.ToString()).CanView().CanEdit().CanDelete().CanAdd().Build()
                 };
 
                 List<Claim> ManagerClaims = new List<Claim>
@@ -54,12 +55,16 @@ namespace ServicesProvider.Infrastructure.Initializer
                     new ClaimBuilder(AppModules.Categories.ToString()).CanView().CanAdd().CanEdit().Build(),
                     new ClaimBuilder(AppModules.CoreActivities.ToString()).CanView().CanAdd().CanEdit().Build(),
                     new ClaimBuilder(AppModules.Services.ToString()).CanView().CanAdd().CanEdit().CanDelete().Build(),
+                    new ClaimBuilder(AppModules.AzureStorage.ToString()).CanView().CanEdit().CanDelete().CanAdd().Build()
+
                 };
                 List<Claim> UserClaims = new List<Claim>
                 {
                     new ClaimBuilder(AppModules.Categories.ToString()).CanView().Build(),
                     new ClaimBuilder(AppModules.CoreActivities.ToString()).CanView().Build(),
                     new ClaimBuilder(AppModules.Services.ToString()).CanView().Build(),
+                    new ClaimBuilder(AppModules.AzureStorage.ToString()).CanView().CanView().CanAdd().Build()
+
                 };
 
               
@@ -103,10 +108,10 @@ namespace ServicesProvider.Infrastructure.Initializer
                 List<(AppUser, string,List<string>)> Users = new List<(AppUser, string,List<string>)>
                 {
                     (new AppUser { UserName = "Alex", Email = "alex@gmail.com", EmailConfirmed=true}, "Alex!510",new List<string>{appRoles[0].Name}),
-                    (new AppUser { UserName = "Ubaid", Email = "ubaid@gmail.com", EmailConfirmed = true }, "Asd@321", new List < string > { appRoles[0].Name }),
+                    (new AppUser { UserName = "Stark", Email = "stark@gmail.com", EmailConfirmed = true }, "Stark@281", new List < string > { appRoles[0].Name }),
                     (new AppUser { UserName = "John", Email = "john@gmail.com", EmailConfirmed = true}, "John*412",new List<string>{appRoles[1].Name,appRoles[2].Name }),
                     (new AppUser { UserName = "Chris", Email = "chris@gmail.com", EmailConfirmed = true}, "Chris#561",new List<string>{appRoles[1].Name }),
-                    (new AppUser { UserName = "Mike", Email = "mike@gmail.com", EmailConfirmed = true }, "Mike-843", new List < string > { appRoles[2].Name }),
+                    (new AppUser { UserName = "Mike", Email = "mike@gmail.com", EmailConfirmed = true }, "Mike&843", new List < string > { appRoles[2].Name }),
                     (new AppUser { UserName = "Sara", Email = "sara@gmail.com", EmailConfirmed = true }, "Sara$743", new List < string > { appRoles[2].Name }),
 
                 };
