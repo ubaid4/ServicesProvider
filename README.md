@@ -42,3 +42,78 @@ Live demo : [Services Provider Live](https://sp-azure-container.politesea-3d1e96
 ## Solid Principles
 
 ## Repository Pattern
+
+## Role
+
+Here is  the list roles :
+<div style="margin: 0 auto; width: 15%; border: 4px solid grey;">
+
+| Sr. | RoleName |
+| --- | -------- |
+| 1   | Admin    |
+| 2   | Manager  |
+| 3   | User     |
+
+</div>
+
+# Role's Permissions
+
+### Admin Permissios:
+<div style="margin: 0 auto; width: 50%; border: 4px solid grey;">
+
+| Module     | CanAdd | CanEdit | CanView | CanDelete |
+| -------------- | :------: | :-------: | :-------: | :---------: |
+| Dashboard      |  ✔      | ✔       | ✔       | ✔         |
+| Users          | ✔      | ✔       | ✔       | ✔         |
+| Roles          | ✔      | ✔       | ✔       | ✔         |
+| Categories     | ✔      | ✔       | ✔       | ✔         |
+| CoreActivities | ✔      | ✔       | ✔       | ✔         |
+| Services       | ✔      | ✔       | ✔       | ✔         |
+| AzureStorage   | ✔      | ✔       | ✔       | ✔         |
+</div>
+
+### Manager Permissions:
+<div style="margin: 0 auto; width: 50%; border: 4px solid grey;">
+
+| Module          | CanAdd | CanEdit | CanView | CanDelete |
+| --------------- | :----: | :-----: | :-----: | :-------: |
+| Dashboard       |   ✖    |    ✖    |    ✔    |    ✖      |
+| Users           |   ✖    |    ✖    |    ✔    |    ✖      |
+| Roles           |   ✖    |    ✖    |    ✔    |    ✖      |
+| Categories      |   ✔    |    ✔    |    ✔    |    ✖      |
+| CoreActivities  |   ✔    |    ✔    |    ✔    |    ✖      |
+| Services        |   ✔    |    ✔    |    ✔    |    ✔      |
+| AzureStorage    |   ✔    |    ✔    |    ✔    |    ✔      |
+</div>
+
+### User Permissions 
+<div style="margin: 0 auto; width: 50%; border: 4px solid grey;">
+  
+
+
+ | ModuleName     | CanAdd | CanEdit | CanView | CanDelete |
+  | -------------- | :------: | :-------: | :-------: | :---------: |
+  | Categories     | ✖      | ✖       | ✔       | ✖         |
+  | CoreActivities | ✖      | ✖       | ✔       | ✖         |
+  | Services       | ✖      | ✖       | ✔       | ✖         |
+  | AzureStorage   | ✔      | ✖       | ✔       | ✖         |
+  
+</div>
+
+## Users
+Here is the list of Users:
+
+
+<div style="margin: 0 auto; width: 50%; border: 4px solid grey;">
+
+| UserName | Email            | Password  | Roles |
+| -------- | :---------------- | ---------: |---------: |
+| Alex     | alex@gmail.com  | Alex!510  |Admin|
+| Stark    | stark@gmail.com | Stark@281 |Admin|
+| John     | john@gmail.com  | John*412  |Manager, User|
+| Chris    | chris@gmail.com | Chris#561 |Manager|
+| Mike     | mike@gmail.com  | Mike&843  |User|
+| Sara     | sara@gmail.com  | Sara$743  |User|
+</div>
+
+
