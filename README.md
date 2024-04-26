@@ -56,10 +56,10 @@ Here is  the list roles :
 
 # Role's Permissions
 
-### Admin Permissios:
+**Admin Permissions:**
 
 
-| Module     | CanAdd | CanEdit | CanView | CanDelete |
+| ModuleName     | CanAdd | CanEdit | CanView | CanDelete |
 | -------------- | :------: | :-------: | :-------: | :---------: |
 | Dashboard      |  ✔      | ✔       | ✔       | ✔         |
 | Users          | ✔      | ✔       | ✔       | ✔         |
@@ -70,10 +70,10 @@ Here is  the list roles :
 | AzureStorage   | ✔      | ✔       | ✔       | ✔         |
 
 
-### Manager Permissions:
+**Manager Permissions:**
 
 
-|   Module          | CanAdd | CanEdit | CanView | CanDelete |
+|   ModuleName          | CanAdd | CanEdit | CanView | CanDelete |
 | --------------- | :----: | :-----: | :-----: | :-------: |
 | Dashboard       |   ✖    |    ✖    |    ✔    |    ✖      |
 | Users           |   ✖    |    ✖    |    ✔    |    ✖      |
@@ -84,7 +84,7 @@ Here is  the list roles :
 | AzureStorage    |   ✔    |    ✔    |    ✔    |    ✔      |
 
 
-### User Permissions: 
+**User Permissions:** 
 
   
 
