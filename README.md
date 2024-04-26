@@ -113,4 +113,4 @@ Here is the list of Users with their Roles:
 
 
 
-  >you can user `UserName` or `Email` with Password to signIn.
+  >you can use `UserName` or `Email` with Password to signIn.
