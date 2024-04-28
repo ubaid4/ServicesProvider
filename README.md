@@ -109,12 +109,24 @@ Let's discuss about each layer of Clean Architecture:
 
 ## Solid Principles Overview: 
 If we talk about Solid Principles Adherence  in this Application, Here is the overview of each principle:
-   - ### Single Responsibility Principle (SRP)
-   - ### Open/Closed Principle (OCP)
-   - ### Liskov Substitution Principle (LSP)
-   - ### Interface Segregation Principle (ISP)
-   - ### Dependency Inversion Principle (DIP)
 
+   - **Single Responsibility Principle (SRP) :**
+
+      This principle describe ajs ajs a sd  sdfs df sd f  f  f rtrgfg se
+   - **Open/Closed Principle (OCP):**
+
+      This principle describe ajs ajs a sd  sdfs df sd f  f  f rtrgfg se
+   - **Liskov Substitution Principle (LSP):**
+
+      This principle describe ajs ajs a sd  sdfs df sd f  f  f rtrgfg se
+   - **Interface Segregation Principle (ISP):**
+
+      This principle describe ajs ajs a sd  sdfs df sd f  f  f rtrgfg se
+
+   - **Dependency Inversion Principle (DIP):**
+
+      This principle describe ajs ajs a sd  sdfs df sd f  f  f rtrgfg se This principle describe ajs ajs a sd  sdfs df sd f  f  f rtrgfg se. This principle describe ajs ajs a sd  sdfs df sd f  f  f rtrgfg se. This principle describe ajs ajs a sd  sdfs df sd f  f  f rtrgfg se. This principle describe ajs ajs a sd  sdfs df sd f  f  f rtrgfg se.
+ 
 
 ## Repository Pattern
 
