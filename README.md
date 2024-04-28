@@ -128,7 +128,19 @@ If we talk about Solid Principles Adherence  in this Application, Here is the ov
       This principle describe ajs ajs a sd  sdfs df sd f  f  f rtrgfg se This principle describe ajs ajs a sd  sdfs df sd f  f  f rtrgfg se. This principle describe ajs ajs a sd  sdfs df sd f  f  f rtrgfg se. This principle describe ajs ajs a sd  sdfs df sd f  f  f rtrgfg se. This principle describe ajs ajs a sd  sdfs df sd f  f  f rtrgfg se.
  
 
-## Repository Pattern
+## Repository Pattern:
+
+There is specific repository for each business entity, It is very useful when we need to change our data source. If datasource change, all responsibility is of it, Rest of application would not be effected, and will do the same working.
+   
+There are 2 following folders in this application which implimenting Repository Pattern :
+   - **Repository Interfaces:**
+
+      This is the ***abstruction*** of Entity Class Operations. This folder resides in Core > Domain folder of application .It has the interfaces for each business entity which describe what we do with that entity, ranther than implimentation.
+
+   - **Repositories :**
+
+      It is the ***Implimentation*** the Repository interface and we define the logic to perform the external operation. These are resides in Infrastructure layer.
+
 
 ## Role
 
