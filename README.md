@@ -5,7 +5,7 @@
 
 
 
-Live demo : [Services Provider Live](https://sp-azure-container.politesea-3d1e9621.australiaeast.azurecontainerapps.io)
+Live demo : [Services Provider Live](https://services-provider-container-app.delightfulsea-eb38f2b4.australiaeast.azurecontainerapps.io)
 
 # Core Features:
 
