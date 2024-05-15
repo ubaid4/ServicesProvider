@@ -110,12 +110,12 @@ Let's discuss about each layer of Clean Architecture:
 ## Solid Principles Overview: 
 If we talk about Solid Principles Adherence  in this Application, Here is the overview of each principle:
 
-   - **Single Responsibility Principle (SRP) :**
+   - **Single Responsibility Principle (SRP) :** A class should have only one reason to change, meaning it should have only one job or responsibility.
 
-      This principle describe ajs ajs a sd  sdfs df sd f  f  f rtrgfg se
-   - **Open/Closed Principle (OCP):**
+      I tried that each class should for single responcibility, I don't imliment it very deeply If i do so then there would be muchmuch file and project would be bulky.
+   - **Open/Closed Principle (OCP):** Software entities (classes, modules, functions, etc.) should be open for extension but closed for modification.
 
-      This principle describe ajs ajs a sd  sdfs df sd f  f  f rtrgfg se
+      I impliment that principle , make a generic repository and general purpose methods, if any module needs specific methods then I inherit generic repository and define the required method
    - **Liskov Substitution Principle (LSP):**
 
       This principle describe ajs ajs a sd  sdfs df sd f  f  f rtrgfg se
