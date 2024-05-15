@@ -110,22 +110,22 @@ Let's discuss about each layer of Clean Architecture:
 ## Solid Principles Overview: 
 If we talk about Solid Principles Adherence  in this Application, Here is the overview of each principle:
 
-   - **Single Responsibility Principle (SRP) :** A class should have only one reason to change, meaning it should have only one job or responsibility.
+   - **Single Responsibility Principle (SRP) :** it says *A class should have only one reason to change, meaning it should have only one job or responsibility.*
 
       I tried that each class should for single responcibility, I don't imliment it very deeply If i do so then there would be muchmuch file and project would be bulky.
-   - **Open/Closed Principle (OCP):** Software entities (classes, modules, functions, etc.) should be open for extension but closed for modification.
+   - **Open/Closed Principle (OCP):** it says *Application entities (classes, modules, functions, etc.) should be open for extension but closed for modification.*
 
       I impliment that principle , make a generic repository and general purpose methods, if any module needs specific methods then I inherit generic repository and define the required method
-   - **Liskov Substitution Principle (LSP):**
+   - **Liskov Substitution Principle (LSP):** it says Subtypes must be substitutable for their base type.
+      This project implimentation not fully impliment that principle, becouse in some case if we substitute subtype (child class) with basetype (parent class) , application behaviour changes, not remains same
 
-      This principle describe ajs ajs a sd  sdfs df sd f  f  f rtrgfg se
-   - **Interface Segregation Principle (ISP):**
+   - **Interface Segregation Principle (ISP):** it says *Clients should not be forced to depend on interfaces that he not need.* 
 
-      This principle describe ajs ajs a sd  sdfs df sd f  f  f rtrgfg se
+      I implimentthat that principle and segregate interfaces in that way if client wants to impliment any interface  all method would be useful for him, there is no such method to impliment which is unnecessory, but he has to impliment forcefully 
 
-   - **Dependency Inversion Principle (DIP):**
+   - **Dependency Inversion Principle (DIP):** *it says High-level modules should not depend on low-level modules. Both should depend on abstraction*
 
-      This principle describe ajs ajs a sd  sdfs df sd f  f  f rtrgfg se This principle describe ajs ajs a sd  sdfs df sd f  f  f rtrgfg se. This principle describe ajs ajs a sd  sdfs df sd f  f  f rtrgfg se. This principle describe ajs ajs a sd  sdfs df sd f  f  f rtrgfg se. This principle describe ajs ajs a sd  sdfs df sd f  f  f rtrgfg se.
+      I impliment that principle in this project .For example, If we see any service implimentation , it needed a repository for external calls. I notice you will see that these services does't depent on repository directly but depent on abstract class of that repository, which in Interface in our case( becouse all methods are abstract, no concerete implimentation).
  
 
 ## Repository Pattern:
